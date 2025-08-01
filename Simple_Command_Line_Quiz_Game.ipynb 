@@ -1,0 +1,130 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Jeevana023/zillonskills-technologies/blob/main/Simple_Command_Line_Quiz_Game.ipynb%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def run_quiz():\n",
+        "    \"\"\"\n",
+        "    Runs a simple command-line quiz game.\n",
+        "    Users get 2 marks for a correct answer and -1 for a wrong answer.\n",
+        "    \"\"\"\n",
+        "    questions = [\n",
+        "        {\n",
+        "            \"question\": \"What is the capital of France?\",\n",
+        "            \"answer\": \"Paris\"\n",
+        "        },\n",
+        "        {\n",
+        "            \"question\": \"Which planet is known as the Red Planet?\",\n",
+        "            \"answer\": \"Mars\"\n",
+        "        },\n",
+        "        {\n",
+        "            \"question\": \"What is the largest ocean on Earth?\",\n",
+        "            \"answer\": \"Pacific Ocean\"\n",
+        "        },\n",
+        "        {\n",
+        "            \"question\": \"Who painted the Mona Lisa?\",\n",
+        "            \"answer\": \"Leonardo da Vinci\"\n",
+        "        },\n",
+        "        {\n",
+        "            \"question\": \"What is the chemical symbol for water?\",\n",
+        "            \"answer\": \"H2O\"\n",
+        "        }\n",
+        "    ]\n",
+        "\n",
+        "    score = 0\n",
+        "    print(\"--- Welcome to the Quiz Game! ---\")\n",
+        "    print(\"Answer the following questions to test your knowledge.\")\n",
+        "    print(\"Correct answer: +2 points | Wrong answer: -1 point\\n\")\n",
+        "\n",
+        "    for i, q_data in enumerate(questions):\n",
+        "        print(f\"Question {i + 1}: {q_data['question']}\")\n",
+        "        user_answer = input(\"Your answer: \").strip()\n",
+        "\n",
+        "        if user_answer.lower() == q_data['answer'].lower():\n",
+        "            print(\"Correct!\")\n",
+        "            score += 2\n",
+        "        else:\n",
+        "            print(f\"Wrong! The correct answer was: {q_data['answer']}\")\n",
+        "            score -= 1\n",
+        "        print(f\"Current Score: {score}\\n\")\n",
+        "\n",
+        "    print(\"--- Quiz Finished! ---\")\n",
+        "    print(f\"Your final score is: {score} points\")\n",
+        "    print(\"----------------------\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    run_quiz()"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "--- Welcome to the Quiz Game! ---\n",
+            "Answer the following questions to test your knowledge.\n",
+            "Correct answer: +2 points | Wrong answer: -1 point\n",
+            "\n",
+            "Question 1: What is the capital of France?\n",
+            "Your answer: paris\n",
+            "Correct!\n",
+            "Current Score: 2\n",
+            "\n",
+            "Question 2: Which planet is known as the Red Planet?\n",
+            "Your answer: mars\n",
+            "Correct!\n",
+            "Current Score: 4\n",
+            "\n",
+            "Question 3: What is the largest ocean on Earth?\n",
+            "Your answer: pacific\n",
+            "Wrong! The correct answer was: Pacific Ocean\n",
+            "Current Score: 3\n",
+            "\n",
+            "Question 4: Who painted the Mona Lisa?\n",
+            "Your answer: leonars dha vinci\n",
+            "Wrong! The correct answer was: Leonardo da Vinci\n",
+            "Current Score: 2\n",
+            "\n",
+            "Question 5: What is the chemical symbol for water?\n",
+            "Your answer: h2o\n",
+            "Correct!\n",
+            "Current Score: 4\n",
+            "\n",
+            "--- Quiz Finished! ---\n",
+            "Your final score is: 4 points\n",
+            "----------------------\n"
+          ]
+        }
+      ],
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Yokl0BFX1POZ",
+        "outputId": "a792ecca-865f-49ee-ea7b-c2f8edaf24a7"
+      }
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
